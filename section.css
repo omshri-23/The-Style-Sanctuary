@@ -1,0 +1,264 @@
+body {
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    text-align: center;
+
+}
+
+/* Restored Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #536b78, #334b47, #685e35);
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.dropdown a {
+    padding: 12px;
+    color: #0077b6;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.dropdown a:hover {
+    background: #00b894;
+    color: white;
+    transform: translateX(3px);
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+    animation: fadeInDropdown 0.3s ease-in-out;
+}
+
+@keyframes fadeInDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.cta-button {
+    background: #ffcc00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.cta-button:hover {
+    background: #f39c12;
+    transform: scale(1.1);
+}
+
+/* Navigation Styling */
+ nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 180px;
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dropdown a {
+    padding: 12px;
+    color: #0077b6;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.dropdown a:hover {
+    background: #00b894;
+    color: white;
+    transform: translateX(3px);
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+    animation: fadeInDropdown 0.3s ease-in-out;
+}
+
+@keyframes fadeInDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Category Section */
+.category-section {
+    text-align: center;
+    padding: 40px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Category Items */
+.category-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.item img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.item h3 {
+    margin: 10px 0;
+}
+
+/* Smooth Hover Effects */
+.item:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling */
+.item button {
+    background: #0077b6;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.item button:hover {
+    background: #00b894;
+    transform: scale(1.1);
+}
+
+
+
+
+/* Footer */
+footer {
+    background: linear-gradient(to left, #035292e6, #00b4d8e3, #efd990e2);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

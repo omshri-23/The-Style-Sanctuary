@@ -1,0 +1,360 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 139, 219, 0.5), rgba(255, 198, 41, 0.455));
+    z-index: -1;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff;
+}
+
+/* Header  (background: linear-gradient(to right, #004e92, #00b4d8, #90e0ef);) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #536b78, #334b47, #685e35);
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}/*
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+*/
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 12px;
+    display: block;
+    transition: background 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: black;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+}
+
+.cta-button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(45deg, #FFC300, #FF8C00);
+    color: white;
+}
+
+/* Dropdown Menu 
+.dropdown {
+    position: relative;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 180px;
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 100;
+}
+*/
+
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    width: 180px;
+    text-align: left;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1100; /* Higher than header */
+}
+
+.dropdown a {
+    padding: 12px;
+    color: #0077b6;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    white-space: nowrap;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.dropdown a:hover {
+    background: #00b894;
+    color: white;
+    transform: translateX(3px);
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+    animation: fadeInDropdown 0.3s ease-in-out;
+    z-index: 1100; /* Ensure it stays above */
+}
+
+
+@keyframes fadeInDropdown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 1; /* Lower than header & dropdown */
+}
+
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); /* Faded effect */
+}
+
+/* Banner Text */
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+/* Headline */
+.banner-text h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Button */
+.banner-text button {
+    background: rgba(255, 255, 255, 0.042);
+    backdrop-filter: blur(5px);
+    padding: 15px 28px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.banner-text button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Home Page Product Section */
+.home-products {
+    width: 100%;
+    margin: 15px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(15, 15, 15, 0.1);
+}
+
+.home-products h2 {
+    text-align: center;
+    color: #004e92;
+    margin-bottom: 20px;
+}
+
+/* Featured Section */
+.featured {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    background: linear-gradient(45deg, #033969, #027f98);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.featured-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 20px;
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 300px;
+    height: 350px;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.product-card h3 {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #004e92;
+}
+
+.product-card:hover h3 {
+    color: #00b4d8;
+}
+
+
+/* Testimonials */
+.testimonials {
+    text-align: center;
+    padding: 50px 0;
+    background: #e3f2fd;
+}
+
+.testimonials h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: scale(1.05);
+}
+
+/* Newsletter */
+.newsletter {
+    text-align: center;
+    padding: 60px 0;
+    background: #ded5d5;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.newsletter button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.newsletter-section {
+    margin-bottom: 0; /* Remove bottom margin */
+    padding-bottom: 0; /* Remove padding */
+}
+
+.newsletter button:hover {
+    background: #ff4e50;
+}
+
+
+
+/* Footer */
+footer {
+    background: linear-gradient(to left, #035292, #00b4d8, #efd990);
+    color: whitesmoke;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+    margin-top: 0;
+    position: relative;
+    bottom: 0;
+}

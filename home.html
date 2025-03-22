@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Style Sanctuary - Online Clothing Store</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">The Style Sanctuary</div>
+        <nav>
+            <ul>
+                
+                <li>
+                    <a href="#">Categories</a>
+                    <div class="dropdown">
+                        <a href="men.html">Men</a>
+                        <a href="women.html">Women</a>
+                        <a href="kid.html">Kids</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        
+        <button class="cta-button" onclick="location.href='shop.html';">Start Shopping</button>
+    </header>
+    
+
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+        <img src="images/all.jpg" alt="Shop the latest trends">
+        <div class="banner-text">
+            <h1>Exclusive Deals on Trendy Outfits!</h1>
+            <button onclick="location.href='shop.html';">Shop Now</button>
+        </div>
+    </section>
+    
+    <!-- Featured Products -->
+    <section class="featured">
+        <h2>Featured Collections</h2>
+        <div class="featured-container">
+
+            <a href="men.html" class="product-link">
+                <div class="product-card">
+                    <img src="images/tokiyo.jpeg" alt="Feature Product 1">
+                    <h3>MEN'S COLLECTION</h3>
+                </div>
+            </a>
+
+            <a href="women.html" class="product-link">
+                <div class="product-card">
+                    <img src="images/onep.jpg" alt="Feature Product 2">
+                <h3>WOMEN'S COLLECTION</h3>
+                </div>
+            </a>
+
+            <a href="kid.html" class="product-link">
+                <div class="product-card">
+                    <img src="images/blue.jpg" alt="Feature Product 3">
+                <h3>KID'S COLLECTION</h3>
+                </div>
+            </a>
+                        
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Amazing quality and fast delivery!" - Alex</p>
+        </div>
+        <div class="testimonial">
+            <p>"Great shopping experience!" - Mia</p>
+        </div>
+    </section>
+    
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+        <h2>Subscribe for Exclusive Offers</h2>
+        <form>
+            <input type="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 The Style Sanctuary. All rights reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+    
+    <script src="home.js"></script>
+</body>
+</html>
